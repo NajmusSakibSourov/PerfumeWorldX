@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PerfumeWorldX - Premium Perfumes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>PerfumeWorldX</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart" id="cart-btn"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Discover Your Signature Scent</h2>
+                <p>Explore our collection of premium perfumes crafted with the finest ingredients</p>
+                <a href="#products" class="btn">Shop Now</a>
+            </div>
+            <div class="perfume-showcase">
+                <img src="Mystic Rose.jpeg" alt="Mystic Rose">
+                <img src="Ocean Breez.....jpg" alt="Ocean Breeze">
+                <img src="Amber night.......jpg" alt="Amber Night">
+                <img src="Citrus Bloom.jpg" alt="Citrus Bloom">
+                <img src="Royal Oud....jpg" alt="Royal Oud">
+                <img src="-velvet-musk-1.jpeg" alt="Velvet Musk">
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Our Collection</h2>
+            <div class="product-grid" id="product-grid">
+                <!-- Products will be loaded here via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About PerfumeWorldX</h2>
+            <p>At PerfumeWorldX, we believe that the right fragrance can transform your mood, evoke memories, and express your personality. Our carefully curated collection features premium perfumes crafted by master perfumers using the finest ingredients from around the world.</p>
+            <p>Each scent tells a unique story, designed to captivate and enchant. Whether you prefer floral, fresh, woody, or oriental notes, we have the perfect fragrance waiting for you.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p>Have questions about our products? We're here to help!</p>
+            <p>Email: najmussakib484@gmail.com</p>
+            <p>Phone: 01328566182</p>
+        </div>
+    </section>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Your Cart</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="cart-items">
+                    <!-- Cart items will be loaded here via JavaScript -->
+                </div>
+                <div class="cart-total">
+                    <p>Total: <span id="cart-total-price">$0</span></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="checkout-btn" class="btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Checkout</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="checkout-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Delivery Address</label>
+                        <textarea id="address" name="address" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="payment">Payment Method</label>
+                        <select id="payment" name="payment" required>
+                            <option value="cash">Cash on Delivery</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="order-confirmation" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Order Confirmed!</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Thank you for your order. Your order has been successfully placed!</p>
+                <p>Order details have been sent to your email.</p>
+                <button id="continue-shopping" class="btn">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 PerfumeWorldX. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
